@@ -23,6 +23,19 @@ describe('methods', function() {
 
   });
 
+  describe('#id', function() {
+
+    it('should return id attribute', function() {
+      var Model = model('Model');
+
+      var result = new Model({ id: '1234' });
+
+      chai.expect(result.id)
+        .to.equal('1234');
+    });
+
+  });
+
   describe('#get(key)', function() {
 
     beforeEach(function() {
