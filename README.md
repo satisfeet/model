@@ -1,4 +1,4 @@
-# Model
+# model
 
 **model** is a client side model library for node and the browser which
 provdes:
@@ -11,46 +11,45 @@ provdes:
 
 With [component](https://github.com/component/component)
 
-		$ component install satisfeet/model
+  $ component install satisfeet/model
 
 With [npm](https://github.com/npm/npm)
 
-    $ npm install --save satisfeet-model
+  $ npm install --save satisfeet-model
 
 ## Documentation
 
 With **model** you can basically just build your own Prototype.
 
-		var model = require('satisfeet-model');
+  var model = require('satisfeet-model');
 
-		var Customer = model('Customer')
-			.schema({
-				name: String,
-				email: String,
-				address: {
-					street: String,
-					city: String
-				}
-			})
-			.statics({
-				find: function() {
-					// receive the model
-				}
-			})
-			.methods({
-				save: function() {
-					// save the model
-				}
-			});
+  var Customer = model('Customer', {
+      name: String,
+      email: String,
+      address: {
+        street: String,
+        city: String
+      }
+    })
+    .statics({
+      find: function() {
+        // receive the model
+      }
+    })
+    .methods({
+      save: function() {
+        // save the model
+      }
+    });
 
-		var customer = new Customer({
-			name: 'Bodo'
-		});
+  var customer = new Customer({
+    name: 'Bodo'
+  });
 
-		customer.set('email', 'info@satisfeet.me');
-		customer.set('address.city', 'Berlin');
+  customer.set('email', 'info@satisfeet.me');
+  customer.set('address.city', 'Berlin');
 
-		customer.toJSON();
+  customer.toJSON();
 
 ## License
 

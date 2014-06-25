@@ -11,8 +11,8 @@ describe('statics', function() {
       chai.expect(result)
         .to.be.a('function')
         .to.have.keys([
+          'use',
           'model',
-          'schema',
           'statics',
           'methods',
         ])
