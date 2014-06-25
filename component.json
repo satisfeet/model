@@ -1,0 +1,25 @@
+{
+
+  "name": "model",
+
+  "repo": "satisfeet/model",
+
+  "license": "MIT",
+
+  "version": "0.0.0",
+
+  "description": "Extendable model library.",
+
+  "main": "lib/index.js",
+
+  "scripts": [
+    "lib/index.js",
+    "lib/statics.js",
+    "lib/methods.js"
+  ],
+
+  "dependencies": {
+    "aheckmann/mpath": "0.2.1"
+  }
+
+}
